@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camp SnickerWillow Hollow, Vol. 1 — Matt Meyer</title>
+<meta name="description" content="Read the first four chapters of Camp SnickerWillow Hollow free, then get the full book.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏕️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Permanent+Marker&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #ede3c6;
+    --paper-2: #e3d3a7;
+    --paper-edge: #d8c491;
+    --ink: #263254;
+    --ink-soft: #4a5680;
+    --stain: #8b5e3c;
+    --seal: #a2372c;
+    --seal-dark: #7c2921;
+    --rule: #c3cee0;
+    --margin: #c26a6a;
+    --cream-text: #f3ead2;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Special Elite', 'Courier New', monospace;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .lined{
+    background-image:
+      repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 38px,
+        var(--rule) 39px,
+        transparent 40px
+      );
+    position: relative;
+  }
+
+  .lined::before{
+    content:"";
+    position:absolute;
+    top:0; bottom:0; left: 46px;
+    width: 2px;
+    background: var(--margin);
+    opacity: 0.55;
+  }
+
+  h1, h2, .marker{
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.15;
+  }
+
+  a{ color: inherit; }
+
+  img{ max-width: 100%; display: block; }
+
+  .wrap{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero{ padding: 64px 0 56px; }
+
+  .hero .wrap{
+    padding-left: 80px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .cover-frame{ position: relative; transform: rotate(-3deg); }
+
+  .cover-frame img{
+    width: 100%;
+    border: 6px solid var(--cream-text);
+    box-shadow: 0 14px 30px rgba(38,50,84,0.35);
+  }
+
+  .tape{
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    background: rgba(243, 234, 210, 0.75);
+    border: 1px dashed rgba(38,50,84,0.3);
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%) rotate(2deg);
+  }
+
+  .kicker{ font-size: 1.05rem; color: var(--stain); margin: 0 0 6px; }
+
+  .hero h1{
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    color: var(--ink);
+    margin: 0 0 4px;
+  }
+
+  .vol{
+    display: inline-block;
+    margin: 6px 0 18px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.3rem;
+    color: var(--seal);
+    transform: rotate(-2deg);
+  }
+
+  .byline{ margin: 0 0 20px; font-size: 1.05rem; color: var(--ink-soft); }
+
+  .hook{ max-width: 46ch; margin: 0 0 28px; }
+
+  .cta-row{ display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+
+  .seal-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 148px;
+    height: 148px;
+    border-radius: 46% 54% 52% 48% / 52% 48% 54% 46%;
+    background: radial-gradient(circle at 35% 30%, var(--seal) 0%, var(--seal-dark) 70%);
+    color: var(--cream-text);
+    text-decoration: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.15rem;
+    line-height: 1.25;
+    box-shadow: 0 8px 18px rgba(124,41,33,0.45), inset 0 0 0 3px rgba(243,234,210,0.25);
+    transition: transform 0.15s ease;
+    padding: 10px;
+  }
+
+  .seal-btn:hover{ transform: rotate(-3deg) scale(1.03); }
+
+  .plain-btn{
+    display: inline-block;
+    padding: 14px 26px;
+    border: 2px solid var(--ink);
+    color: var(--ink);
+    text-decoration: none;
+    font-family: 'Special Elite', monospace;
+    font-size: 1rem;
+    background: transparent;
+  }
+
+  .plain-btn:hover{ background: var(--ink); color: var(--paper); }
+
+  /* ---------- Story section ---------- */
+
+  .story{
+    background: var(--paper-2);
+    border-top: 1px solid var(--paper-edge);
+    border-bottom: 1px solid var(--paper-edge);
+    padding: 56px 0;
+  }
+
+  .story .wrap{ padding-left: 80px; max-width: 720px; }
+
+  .story h2{ font-size: 1.9rem; margin: 0 0 22px; color: var(--ink); }
+
+  .story p{ margin: 0 0 18px; }
+  .story p:last-child{ margin-bottom: 0; }
+
+  .signoff{ margin-top: 26px; font-style: italic; color: var(--ink-soft); }
+
+  /* ---------- Read section ---------- */
+
+  .read{ padding: 56px 0 64px; }
+
+  .read .wrap{ padding-left: 80px; max-width: 760px; }
+
+  .read h2{ font-size: 1.9rem; margin: 0 0 10px; }
+
+  .read .lede{ max-width: 60ch; margin: 0 0 28px; color: var(--ink-soft); }
+
+  .chapter-nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .chapter-nav a{
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid var(--ink-soft);
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .chapter-nav a:hover{ border-color: var(--ink); color: var(--ink); }
+
+  .chapter{ margin-bottom: 54px; }
+
+  .chapter h3{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.6rem;
+    color: var(--stain);
+    margin: 0 0 24px;
+  }
+
+  .chapter p{
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: var(--ink);
+    max-width: 64ch;
+    margin: 0 0 20px;
+  }
+
+  .letter{
+    background: var(--cream-text);
+    border: 1px solid var(--paper-edge);
+    padding: 30px 34px;
+    margin: 30px auto;
+    max-width: 46ch;
+    box-shadow: 0 10px 24px rgba(38,50,84,0.2);
+    transform: rotate(-1deg);
+  }
+
+  .letter p{
+    font-family: 'Lora', Georgia, serif;
+    font-style: italic;
+    max-width: none;
+    margin: 0 0 14px;
+  }
+
+  .letter p:last-child{ margin-bottom: 0; }
+
+  .letter .checks{ font-style: normal; }
+
+  .chapter-end{
+    width: 120px;
+    margin: 0 auto;
+    opacity: 0.55;
+  }
+
+  .download-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .download-row .note{ color: var(--ink-soft); font-size: 0.92rem; }
+
+  /* ---------- Footer ---------- */
+
+  footer{ padding: 40px 0 56px; text-align: center; }
+
+  .doodle{ width: 140px; margin: 0 auto 18px; opacity: 0.7; }
+
+  footer p{ margin: 4px 0; color: var(--ink-soft); font-size: 0.92rem; }
+
+  footer a{ text-decoration: underline; }
+
+  /* ---------- Responsive ---------- */
+
+  @media (max-width: 760px){
+    .hero .wrap, .story .wrap, .read .wrap{ padding-left: 28px; }
+    .lined::before{ left: 18px; }
+    .hero .wrap{ grid-template-columns: 1fr; text-align: left; }
+    .cover-frame{ width: 200px; margin: 0 auto 12px; }
+    .letter{ padding: 22px 22px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .seal-btn{ transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero lined">
+  <div class="wrap">
+    <div class="cover-frame">
+      <div class="tape"></div>
+      <img src="assets/cover.jpg" alt="Cover of Camp SnickerWillow Hollow, Volume 1, drawn on a coffee-stained notebook page with a lake monster, a compass, a campfire, and a plate of dubious food.">
+    </div>
+    <div>
+      <p class="kicker">A free excerpt from the middle grade novel</p>
+      <h1>Camp SnickerWillow Hollow</h1>
+      <span class="vol">Vol. 1</span>
+      <p class="byline">by Matt Meyer</p>
+      <p class="hook">Thirteen-year-old Caleb Wilder builds robots, not friends. Then a letter that won't shred sends him to a magic camp that isn't supposed to exist &mdash; under someone else's name.</p>
+      <div class="cta-row">
+        <a class="seal-btn" href="#read">Read Ch. 1&ndash;4<br>free</a>
+        <a class="plain-btn" href="https://a.co/d/0a4B5YZD" target="_blank" rel="noopener">Get the full book</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="story">
+  <div class="wrap">
+    <h2>The story so far</h2>
+    <p>Caleb Wilder has won the Hancock County Science Fair three years running, and his homemade robot is about to make it four &mdash; until the mayor's cousin walks off with first place instead. With no science camp to look forward to, Caleb ends up shredding undeliverable mail in his dad's post office, which is where he finds a letter that refuses to be destroyed.</p>
+    <p>It's addressed to a boy named Felix Brightmoor, inviting him to Camp SnickerWillow Hollow &mdash; the Midwest's premier magic camp, no charge, all meals included. Felix never answered. Caleb does, and by midnight he's traded his workbench for a bus ticket to Gary, Indiana, and a boat that leaves from dock 9 at 11:14 sharp.</p>
+    <p class="signoff">The first four chapters are yours to read, free, below.</p>
+  </div>
+</section>
+
+<section class="read" id="read">
+  <div class="wrap">
+    <h2>Read the first four chapters</h2>
+    <p class="lede">The Science Unfair. A Double Dose of Despair. The Dead Letter Office. And the letter that changes everything.</p>
+
+    <nav class="chapter-nav">
+      <a href="#ch1">Chapter 1</a>
+      <a href="#ch2">Chapter 2</a>
+      <a href="#ch3">Chapter 3</a>
+      <a href="#ch4">Chapter 4</a>
+    </nav>
+
+    <article class="chapter" id="ch1">
+      <h3>Chapter One &mdash; The Science Unfair</h3>
+      <p>I don't mean to brag, but I am the three time reigning champion at the All Ages Hancock County Science Fair. And looking around at the other &ldquo;competitors&rdquo; in this year's contest, I'm absolutely certain that number four is in the bag. Basically, what I can do with science is almost like magic. Ok, that was bragging. Sorry.</p>
+      <p>I already cleared a space on the shelf over my computer for my next trophy. It wasn't hard. I just had to move a couple of unused servos, a stack of NFC chips, and a dusty action figure dressed in wizard robes from back when I was considering getting into cosplay. Thankfully, I didn't have to move any pictures of friends because, well, as you might have guessed, I don't have any.</p>
+      <p>It's not that bad, really. I like being alone. All the time. Doing science stuff. Did I mention I'm good at science stuff? My dad says I'll probably be a famous rocket scientist one day. I'm not really interested in propulsion and trajectory. I mean, I dabble, who doesn't? But I'd rather do something a little more down to earth. Not inventing new pharmaceuticals or anything like that. I don't know. I'm young. I still have plenty of time for something to catch my fancy.</p>
+      <p>Oh, the reason I didn't actually get into cosplay is because I got into science camp instead. I've gone for the last, you probably guessed it again, three years. My parents &mdash; they're great. Maybe a little too much into 1950s and 1960s musicals which they sing around the house at all hours &mdash; were relieved when I won my first science fair because they don't have a lot of money.</p>
+      <p>My dad is an assistant postmaster, and my mom is the office manager for the water department and moonlights as a waitress on the weekends. They make ends meet. But extra stuff like science camp is a little out of their budget. Thankfully, a trip to science camp is the prize for winning this competition, which I am about to do. Again.</p>
+      <p>The judges were three stops away. The girl who made the project they're examining finished fourth last year. She's not bad. But all her stuff revolves around farming. I'm assuming that's what her parents do. This year she made a kinetic cow gate (a model of one, at least) that captures the pressure of each cow's step as it passes through the gate and sends the power to the electric fence that's keeping the cows in. It's a bit grotesque. And it's basically derivative of regenerative braking found in dozens upon dozens of vehicles. But she's a senior and the vice president of the FFA. She will probably finish in the top three.</p>
+      <p>Their next stop is a second grader who made one of those erupting volcano kits you can buy on Amazon for twenty bucks. Good luck, kid.</p>
+      <p>Two stops away. I yawn. I know I shouldn't. It's not very sporting of me. But I didn't actually get much sleep last night. I know I'm going to win, but it's still hard to sleep when you have so much riding on one performance. I didn't even see what that contestant did. But judging by the looks on the judges faces, it wasn't good.</p>
+      <p>Next to me is last year's runner up. He's sweating. Profusely. Poor guy. His project is actually pretty good. Maybe even better than last year. It's a city model with a vacuum sealed mass transit system that could more than double both the capacity and speed of a traditional subway. It's cool. I like it. It's insurmountably expensive. Because you'd have to build the city around the system rather than the other way around. Still, not bad.</p>
+      <p>My turn. The judges approached me. The judges are mostly the same from last year: the vice principal of the high school and the mayor who has run unopposed for five consecutive terms. There's one new guy. His name is Carl Gardner. He apparently owns the largest tow truck company in the state. Nice guy. Big moustache.</p>
+      <p>&ldquo;Ahh, Caleb Wilder,&rdquo; said the mayor, &ldquo;Our returning champion, back for more.&rdquo;</p>
+      <p>&ldquo;That's me,&rdquo; I replied. I tried to smile. I say tried to because every time I attempt a smile in the mirror it always looks like I have a toothache.</p>
+      <p>&ldquo;What have you got for us this year,&rdquo; the vice principal asked.</p>
+      <p>I pulled the cover off of my project which was already hard at work. It's a little machine in the middle of a bunch of parts that it is assembling around itself.</p>
+      <p>The judges look confused. I expected nothing less.</p>
+      <p>&ldquo;It's a self-propagating replication integration generator,&rdquo; I said. &ldquo;SPRIG, for short.&rdquo;</p>
+      <p>&ldquo;A what,&rdquo; they reply in chorus.</p>
+      <p>&ldquo;It's an autonomous solar powered robot that captures carbon from the air and compresses and solidifies it into filament that it then uses to 3D print larger versions of its own components eventually building larger version of itself, and then the larger robot does the same thing and so on and so on until you have&rdquo; I pulled off the cover behind me to reveal a half human-sized robot that rolled forward on its all terrain tank treads. &ldquo;Ta da,&rdquo; I said. I couldn't help myself.</p>
+      <p>&ldquo;Yes,&rdquo; said Mr. Gardner, &ldquo;But what does it do?&rdquo;</p>
+      <p>&ldquo;Anything you want,&rdquo; I said. &ldquo;I wrote a few hundred lines of code that can read the installed SD card with an offline version of every technical manual on the internet and added a bit of AI along with a cellular receiver and WiFi just for fun. Once it gets as big as the robot behind me &mdash; that's as big as I can go so far because of solar and binding agent limitations, but Gen 2 should address both of those issues &mdash; it can do most tasks from menial to medical.&rdquo;</p>
+      <p>I can tell I lost them. I might have lost you too. Sorry. Again. But stick with me, the story gets good. Especially when I tell you about &hellip; No, I'd better not give that away yet.</p>
+      <p>&ldquo;Right, once it's full sized it can be programmed to do a variety of practical things: Custom parts fabrication.&rdquo; They were still disconnected. &ldquo;Customer information interface.&rdquo; Nothing. &ldquo;Or if you need a bagger at the grocery store, it could do that too.&rdquo;</p>
+      <p>&ldquo;So it's going to replace humans,&rdquo; asked the vice principal.</p>
+      <p>&ldquo;Some,&rdquo; I replied, &ldquo;But that will just free them up to do better things.&rdquo;</p>
+      <p>&ldquo;Better things like what? Like changing a tire on a 1969 Coronet?&rdquo;</p>
+      <p>I'm not sure if that was an accusation or just a query. I decided to risk it and answer honestly. &ldquo;It could do that too,&rdquo; I answered. And probably better than a human. That part I don't say out loud.</p>
+      <p>Mr. Gardner glared at me for a moment. Then he broke into a wild, toothy grin. &ldquo;Well don't that just beat all.&rdquo;</p>
+      <p>I grinned too. I think.</p>
+      <p>The judges took their leave of me and headed to the platform for a tete a tete.</p>
+      <p>Last year's runner up walked up to me &mdash; Brandon. His name is Brandon. I didn't remember. I saw his name tag as he approached me &mdash; with a look of awe on his face.</p>
+      <p>&ldquo;Robots that build themselves? That's incredible.&rdquo;</p>
+      <p>&ldquo;Thanks. Yours is pretty cool too.&rdquo;</p>
+      <p>&ldquo;You really think so?&rdquo;</p>
+      <p>I told him that I do. He looked relieved as he wiped more sweat off of his forehead.</p>
+      <p>As the ceremony started, I relaxed. I visualized the trophy on my shelf right next to the other three.</p>
+      <p>&ldquo;In third place, Brandon Davis.&rdquo;</p>
+      <p>There was a polite round of applause. Probably from his parents. I wish mine could have been here. But they both had to work. Brandon walked to the platform to get his third place ribbon. I wondered who second place was going to be. My money, if I had any, would be on Cowgirl. I would have been wrong.</p>
+      <p>&ldquo;In second place, Caleb Wilder.&rdquo;</p>
+      <p>I'm not sure if it was just me, but it seemed like all the air in the entire room just disappeared. Nobody breathed. No pin was available to drop. I was barely conscious of my feet propelling me toward the platform. I didn't win. How is that possible?</p>
+      <p>The judges shook my hand one by one.</p>
+      <p>The vice principal muttered, &ldquo;I'm sorry.&rdquo;</p>
+      <p>Mr. Gardner said, &ldquo;Good showing, son.&rdquo;</p>
+      <p>The mayor grinned and said, &ldquo;you can't win them all.&rdquo;</p>
+      <p>I was almost back to my seat when they called the winner.</p>
+      <p>&ldquo;Bridgette Gardner.&rdquo;</p>
+      <p>Bridgette &ldquo;Cowgirl&rdquo; Gardner. It was rigged. For those of you playing along, I was clearly the victim of nepotism. I looked up. Bridgette and Mr. Gardner were smiling and taking pictures together. This whole thing was a sham. A farce. And I was going to do something about it.</p>
+      <p>What I did about it was grab my things and leave as quickly as possible. I've never been accused of being brave. Bravery and a penchant for all things science rarely go hand in hand. Brandon tried to say something to me as I headed out the door, but I didn't turn around to listen. I ran down the street carrying my stupid robot and contemplating all of my life choices.</p>
+    </article>
+
+    <svg class="chapter-end" viewBox="0 0 140 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M2 12 Q 12 2, 22 12 T 42 12 T 62 12 T 82 12 T 102 12 T 122 12 T 138 12" fill="none" stroke="#8b5e3c" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+
+    <article class="chapter" id="ch2">
+      <h3>Chapter Two &mdash; A Double Dose of Despair</h3>
+      <p>I arrived at my house. I flung open the front door, and do you know what I saw? A huge, like wall-to-wall big, homemade sign that said &ldquo;Congratulations Number 4!&rdquo; Oh, good. I've not just had my own day ruined, I've disappointed my parents. My mom probably put several hours into that sign. It was pretty cool, though.</p>
+      <p>There was a note on the dining table that said &ldquo;Your father and I won't be home in time for dinner, but there are a couple of slices of pizza in the fridge, and I made you a little something special that's on the kitchen counter.&rdquo;</p>
+      <p>Spoiler, it was puppy chow. My absolute favorite. If you've never had puppy chow, drop whatever you're doing and go find some. You'll thank me later.</p>
+      <p>I skipped the pizza and dove right into drowning my sorrows in puppy chow. It nearly worked.</p>
+      <p>Mom and Dad got home (yes, we only have one car) a little before 8:00. They were so happy. They came in singing 76 Trombones from The Music Man. I know this because I've seen The Music Man eleven times.</p>
+      <p>&ldquo;There's the champ,&rdquo; said Mom.</p>
+      <p>&ldquo;We should get his autograph before he gets too famous,&rdquo; added Dad.</p>
+      <p>&ldquo;Guys&hellip;&rdquo; I tried to interrupt their revelry, but they were having too much fun.</p>
+      <p>&ldquo;Dear,&rdquo; Mom said to Dad. &ldquo;I think we left something in the car.&rdquo;</p>
+      <p>Dad playfully smacked his forehead. &ldquo;That's right&rdquo; he winked at me and whistled his way out the door.</p>
+      <p>&ldquo;Mom I&hellip;&rdquo;</p>
+      <p>&ldquo;Didn't bother with the pizza and went straight for the puppy chow?&rdquo;</p>
+      <p>&ldquo;No. I mean, yes. But&hellip;&rdquo;</p>
+      <p>&ldquo;You don't have to worry about any buts. You are the champ. You can indulge a little bit.&rdquo;</p>
+      <p>Dad returned with a brand new, completely not wrapped, travel backpack.</p>
+      <p>&ldquo;For science camp,&rdquo; he said. &ldquo;It's got lots of little pockets for all your doodads and whazzits.&rdquo; He handed it to me.</p>
+      <p>&ldquo;And some space for deodorant which you need to be wearing every day, sweetie.&rdquo;</p>
+      <p>I squirmed in my seat. I do wear deodorant. Most of the time.</p>
+      <p>&ldquo;Do you have the receipt?&rdquo; I asked.</p>
+      <p>Concern washed over Mom's face. &ldquo;You don't like it?&rdquo;</p>
+      <p>&ldquo;I love it. It's perfect. But I don't need it. I'm not going to science camp. I didn't win.&rdquo;</p>
+      <p>One of the best things about my parents is that they don't hide their emotions well. They both flipped out. I mean, they're too nice to flip out flip out, but they flipped out in their own way, which is mostly saying things like &ldquo;how can this be&rdquo; and &ldquo;did you ask them to count the votes again?&rdquo;</p>
+      <p>&ldquo;I got second place,&rdquo; I said.</p>
+      <p>The most heartbreaking thing was when my dad looked at my mom and said &ldquo;I could deliver pizzas at night, just for the summer.&rdquo;</p>
+      <p>She was halfway through her nod of agreement, tears welling in her eyes, when I stopped them.</p>
+      <p>&ldquo;No way,&rdquo; I said. &ldquo;I just won't go to camp this year.&rdquo; Or maybe ever again. &ldquo;I'll figure something out.&rdquo;</p>
+      <p>Mom protested. But dad got this gleam in his eyes. &ldquo;That's right. You will. Because that's what science is, right? Figuring things out, especially hard things. Impossible things.&rdquo; He then launched into a bit of Man of La Mancha. Mom laughed. I sighed.</p>
+      <p>Actually, the scientific method is this: start with an observation. I lost the science fair. Ask a question. Why did I lose the science fair? Create a hypothesis. I lost the science fair because Bridgette Gardner and her dad or uncle or cousin or just some random guy with the same last name cheated. Then test the hypothesis with an experiment. This is where I get stuck. Because I have no way to prove my hypothesis. So I have to assume that my hypothesis failed. She won because her project was actually better than mine. I can taste the bile in my throat. But I soldier on. Create a new hypothesis: I lost the science fair. Now what?</p>
+      <p>&ldquo;I think I'm going to my room,&rdquo; I said. I handed the backpack to Dad.</p>
+      <p>&ldquo;Ok, sweetheart,&rdquo; said mom. She hugged me. It's not that I don't like hugs. But I didn't think I could stand one more second of delay. I walked down the squeaky narrow hallway and into my room. I forgot the puppy chow.</p>
+      <p>My room is small, and my stuff makes it smaller. I do have all sorts of whazzits and doodads. Or more properly I have an assortment of motors and gearboxes and actuators. A second hand spectrophotometer. A whiteboard with an unsolved physics equation that I'm this close to solving.</p>
+      <p>And my computer. It's thirteen years old, like me. But I stripped down all the unnecessary stuff, installed Linux (my own interface which is super cool, but it would take too long to describe) and loaded it up with as much RAM (128 GB) as I could squeeze in and the fastest processor I could afford (not a very fast one, but I make due). I don't game, or edit videos or anything like that. I just do some simple climate simulations and CAD renderings. And of course 3D printing from my stupid second place robot.</p>
+      <p>I sat and looked at my blank monitor screen for about an hour before I heard a gentle knock on my door.</p>
+      <p>&ldquo;You can come in.&rdquo;</p>
+      <p>Uh oh. It was both my parents. It felt like an intervention.</p>
+      <p>My dad handed me the backpack.</p>
+      <p>&ldquo;Dad&hellip;&rdquo;</p>
+      <p>&ldquo;You're right,&rdquo; he said. &ldquo;Sending you to science camp this year is not feasible. Maybe if we had planned ahead. But we were so sure you were going to win.&rdquo;</p>
+      <p>&ldquo;Darling,&rdquo; Mom said to Dad.</p>
+      <p>&ldquo;Right. The thing is, if you're not going to camp, it's not a great plan to leave you here all summer by yourself.&rdquo;</p>
+      <p>&ldquo;You're only thirteen,&rdquo; Mom added.</p>
+      <p>&ldquo;I can take care of myself,&rdquo; I said. I meant it. Mostly.</p>
+      <p>&ldquo;Sure you can,&rdquo; said Dad. &ldquo;But, if you want to guarantee that you can go to camp next year, and since you're not going to camp this year, maybe you could get a job.&rdquo;</p>
+      <p>A job? He can't be serious. I look from one parent to another. He is serious.</p>
+      <p>&ldquo;And I think I know the perfect one,&rdquo; he said.</p>
+      <p>Cue the ominous music in your head.</p>
+    </article>
+
+    <svg class="chapter-end" viewBox="0 0 140 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M2 12 Q 12 2, 22 12 T 42 12 T 62 12 T 82 12 T 102 12 T 122 12 T 138 12" fill="none" stroke="#8b5e3c" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+
+    <article class="chapter" id="ch3">
+      <h3>Chapter Three &mdash; The Dead Letter Office</h3>
+      <p>I have never once considered working at the Post Office to be a perfect summer, or any other season, job. But here we are.</p>
+      <p>My mom dropped us off at work. It was a 23 minute drive at 6:30 in the morning. I didn't even know they had a 6:30 in the morning during summers. My parents sang the whole way, but it was so early that my dad had to sing baritone instead of his normal tenor. They mostly did duets from Rogers and Hammerstein &mdash; Shall We Dance, People Will Say We're in Love, and so forth &mdash; while I brooded dramatically in the back seat. Ok, I just sat sleepily, but I did look out the window with at least a semi-dramatic middle distance stare. Why do I keep talking about musical stuff? I'm a science kid, by George. But everybody is, at least in part, a product of their environment.</p>
+      <p>As we walked to the front door, Dad said to me, &ldquo;Now, this is just a trial day. If it doesn't fit, you don't have to wear it. Just give it one full day.&rdquo;</p>
+      <p>&ldquo;Got it,&rdquo; I said. As a good scientist, I chose not to go with my gut which was telling me that I would hate working at the post office. Instead I relied on the method. Observation: the post office has jobs. Question: should I work at the post office? Hypothesis: here goes nothing.</p>
+      <p>The post office didn't open until 8:00, but it was already hopping by the time we got there. The delivery drivers and the mail sorters were in the throws of a letter frenzy. Even the postmaster, Mr. Finchley, looked like he was running in circles. As soon as he saw my Dad, he waved us over.</p>
+      <p>&ldquo;Good morning, Harold,&rdquo; he said to Dad because that's Dad's name. &ldquo;This must be little Caleb.&rdquo;</p>
+      <p>I'm not little. I'm the second tallest boy in my class. &ldquo;Pleased to meet you,&rdquo; I said.</p>
+      <p>&ldquo;Good morning, Gene,&rdquo; my dad said to the postmaster. &ldquo;Thanks for giving Caleb this opportunity. I'll start him in supplies. And then rotate every couple of hours until he finds something he likes.&rdquo;</p>
+      <p>Mr. Finchley gave my dad a brief thumbs up and then ran off to put out a fire &mdash; not a literal fire, that would have been awesome.</p>
+      <p>Dad dropped me off with Barbara, an ancient lady who moved at the speed of that University of Queensland pitch drop experiment. You can look it up for yourself, but let me tell you, it's slow.</p>
+      <p>She had me resupply pens, envelopes, and priority boxes. It took me eleven minutes. That's it. That's the only task she had for me for two hours. Two hours. To keep myself from getting bored(er), I would supply a box or an envelope every time someone would use one. I resupplied exactly 6 boxes and 4 envelopes in two hours. Each trip took me approximately 45 seconds. So I did 7 minutes and 30 seconds of work plus the original 11 minutes resulting in 18 minutes and 30 seconds of work in two hours, or 15.417% of my scheduled time was accomplishing anything.</p>
+      <p>The next job was worse. I wiped down the insides of empty PO boxes.</p>
+      <p>Then came lunch &mdash; the pizza I didn't eat the night before.</p>
+      <p>Then I swept the floors. I'm not above menial jobs. I'm thirteen, for goodness sake. But I could tell that there wasn't really a job for me here. Everyone was just being nice to my dad, and by extension me. I wasn't qualified to do any actual postal work. At most I would be a pet. At worst I would be a nuisance. I didn't want to be either.</p>
+      <p>As I sauntered down the hallway with a dust mop trying to take as much time as possible (I learned my lesson this morning), I came across a strange door. Well, it was an absolutely normal door, but it had a strange nameplate on it that read Dead Letter Office.</p>
+      <p>That sounded cool.</p>
+      <p>I tried to open the door, but it was locked.</p>
+      <p>There are few things I like more in the world than a locked door. Seriously. It creates a sense of intrigue. Combine it with the word &ldquo;dead&rdquo; and it becomes both ominous and foreboding but no less fascinating. I timed my third sweep of the hallways so that I would be right beside the Dead Letter Office Door exactly when Dad came to find me.</p>
+      <p>&ldquo;There you are,&rdquo; he said as I pretended to sweep a particularly dirty spot in front of the door.</p>
+      <p>I stood my ground and waited for him.</p>
+      <p>&ldquo;Ready?&rdquo;</p>
+      <p>&ldquo;For what,&rdquo; I asked.</p>
+      <p>&ldquo;Barbara was so impressed by your work this morning that she wanted you to come back for round two.&rdquo;</p>
+      <p>Oh no. &ldquo;Um, actually, I was wondering about this door?&rdquo;</p>
+      <p>&ldquo;The Dead Letter Office? Oh you don't want to go in there.&rdquo;</p>
+      <p>&ldquo;What is it?&rdquo;</p>
+      <p>&ldquo;Whenever letters can't be either delivered or returned to sender, they end up in the Dead Letter Office. If nobody comes to claim the items then the high value items are sent to the main branch and auctioned off and the low value items are shredded. At least that's the idea. We've been understaffed for a while, so that office is probably overflowing with the shreddable stuff.&rdquo;</p>
+      <p>&ldquo;I could help.&rdquo; I don't know what made me say it. Maybe it was just the boredom with all the other jobs or the looming threat of hanging out with Barbara again &mdash; I doubt she's moved six inches all day. But there was something else too, something that was compelling me to go inside.</p>
+      <p>After a moment's contemplation, Dad nodded. &ldquo;Ok. But as you're not a real postal worker, yet, don't open any of the boxes. But you can shred all the letters.&rdquo;</p>
+      <p>He inserted his key into the lock. &ldquo;Are you sure you want to do this?&rdquo;</p>
+      <p>&ldquo;Yes,&rdquo; I said.</p>
+      <p>He opened the door.</p>
+      <p>The room was maybe 10 x 20 that was lit by harsh industrial light. There were stacks and stacks of maybe fifty mail bins filled with letters.</p>
+      <p>Dad grabbed a couple of bins off a piece of archaic machinery and set them on the floor. &ldquo;I'm not even sure old Bessie still works. Cross your fingers.&rdquo;</p>
+      <p>He fired up the old shredder. It coughed and spluttered and roared to life. &ldquo;Right. Don't do too many sheets at a time. Keep all your fingers attached. Good luck.&rdquo;</p>
+      <p>He left.</p>
+      <p>If you think shredding sounds fun, you're not wrong. It's cathartic (I think that's the word). I eased my way into the destruction. I started with one letter at a time. But old Bessie seemed to be hungry for more. I tried two. Then three. I maxed out at five. It was awesome.</p>
+      <p>This went on for three boxes until, in the middle of the fourth, I found a strange letter. It was large and square and parchmenty and sealed with wax and missing any stamps or postage. No wonder it didn't get delivered. It was addressed to a Mr. Felix Brightmoor. It didn't have an address. The wax seal had the letters SH in fancy script.</p>
+      <p>Instead of shredding it, I set it aside. It was too unique to just destroy so callously. But it wasn't unique. Two bins later, I found another. Three bins after that, I found a third. Then a fourth. Then, in the bin Dad had moved off of Old Bessie, I found a fifth one. It was different because, in addition to the name, it had the words &ldquo;final notice&rdquo; written in big, bold letters.</p>
+      <p>I felt bad for Felix, whoever he was, because he was missing out on all these interesting letters. I looked up at the clock &mdash; I think I forgot to mention that there was a clock. There was one. It looked exactly like what a clock in a post office should look like. Use your imagination &mdash; and it told me I had ten minutes left.</p>
+      <p>I didn't want to shred the letters. But since there were five of them, I figured, I could shred at least one. Let me tell you, Old Bessie did not like when I shoved Felix's letter into her teeth. The whole shredder shook and screamed as it took the letter into its depths. And then Bessie quit. A red light flashed.</p>
+      <p>Oops.</p>
+      <p>I tried to reverse it. Nothing happened.</p>
+      <p>I turned it off and on again. Still nothing.</p>
+      <p>Then I unplugged it &mdash; anytime you're dealing with any machinery that can burn or mangle, this is always a good idea &mdash; and opened up the trap where the shredded paper falls.</p>
+      <p>Do you know what I saw in there? Felix's letter. Completely unharmed.</p>
+      <p>Sure, you would think that was odd. But when it happened, I wasn't thinking odd. I was thinking that I broke the shredder.</p>
+      <p>I pulled the letter out of the trap and plugged Old Bessie back in. What do you know? It shuddered back to life. I inserted the letter again and got the same result.</p>
+      <p>Now I was thinking odd.</p>
+      <p>I took another letter from another bin &mdash; it was something about a timeshare vacation rental &mdash; and it shredded completely normally.</p>
+      <p>I tried Felix's letter again. Another shut down.</p>
+      <p>Just for fun I tried to shred a different letter belonging to Felix. It produced the same result as the first. I repeated it until all five letters had been tested.</p>
+      <p>I was now intrigued. And like any burgeoning scientist would do, I hid the final notice letter under my shirt. Five minutes later Mom picked us up and we drove home.</p>
+      <p>I ate dinner. Two nights in a row without dinner would have been a dumb idea. But I ate it quickly so that I could get back to my room and start experimenting on the letter.</p>
+    </article>
+
+    <svg class="chapter-end" viewBox="0 0 140 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M2 12 Q 12 2, 22 12 T 42 12 T 62 12 T 82 12 T 102 12 T 122 12 T 138 12" fill="none" stroke="#8b5e3c" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+
+    <article class="chapter" id="ch4">
+      <h3>Chapter Four &mdash; What the Letter Said and What I Did About It</h3>
+      <p>I hadn't even considered opening it. It wasn't my letter. But I was at least going to experiment on it to find what that letter was made of.</p>
+      <p>Once I retired to my room, I immediately embarked on a quest to destroy the envelope. Scissors didn't work. But they were old. My box cutter didn't work either. The blade actually snapped.</p>
+      <p>Mom and Dad wouldn't let me have a Bunsen burner in the house. But I did have a candle lighter. The envelope wouldn't burn. It didn't even get hot.</p>
+      <p>If I could make something like this material, SPRIG 2.0 would definitely win a science fair. Or a Nobel Prize.</p>
+      <p>After the failure of all my attempts, I resorted to the only thing I had yet to consider. I opened the envelope.</p>
+      <p>Inside was one piece of paper, made of the same material as the envelope, folded in half.</p>
+      <p>This is what was written on it:</p>
+
+      <div class="letter">
+        <p>Dear Felix Brightmoor,</p>
+        <p>Congratulations! You have been selected to attend Camp SnickerWillow Hollow, the Midwest's premiere magic camp. It is a truly fun and eye opening experience where you will learn to hone your skills, do fun projects, and, above all, make lifelong friends.</p>
+        <p>And of course you will be entered into the all-camp tournament, where the winner will learn all our secrets and be welcomed into our ever-growing enclave.</p>
+        <p>There is no charge to attend SnickerWillow Hollow, and all meals, including snacks, are included.</p>
+        <p>Register today to reserve your spot.</p>
+        <p>Sincerely,<br>Eldric Starwillow<br>Head Counselor</p>
+        <p class="checks">&#9744; Yes, I will be attending<br>&#9744; Sorry, I can't make it this year</p>
+        <p>PS if we don't hear from you by midnight on June 14th, your offer will be rescinded.</p>
+      </div>
+
+      <p>Today was June 14th. It was 10:48 pm. Poor Felix had a little more than an hour to respond.</p>
+      <p>Out of curiosity, I searched the internet for Camp SnickerWillow Hollow. I found nothing. That didn't sound very premiere to me. But maybe the whole magic community was lurking in some obscure subreddit because people that are into magic make science freaks like me seem normal.</p>
+      <p>Although card tricks, mentalism, and cutting people in half didn't appeal to me, a camp where everything was paid for and where people could make lifelong friends sounded like something I would like to do. Something I wish I could do.</p>
+      <p>But it was too late. I sighed and laid back on my bed and looked up at the stars &mdash; I have a map of the milky way on my ceiling. My summer fate was sealed. I would be working with slo-mo Barbara and the Postal crew of misery.</p>
+      <p>I fell asleep.</p>
+      <p>I woke with a start and realized that I hadn't gone to the bathroom before bed. That's a bad idea. I clambered to my feet and stumbled my way to the door. I was being dramatic. Sometimes I do that. I banged my hip on my desk chair. Which drew my attention to Felix's letter.</p>
+      <p>Poor Felix, I thought as I looked at the clock: 11:59.</p>
+      <p>On a whim, just for fun, I picked up a pen and checked the &ldquo;yes, I will be attending&rdquo; box, just as the clock struck midnight.</p>
+      <p>The letter spontaneously combusted.</p>
+      <p>In a flash, the letter and the envelope were completely gone. There was no trace that they had ever been there. Not even a scorch mark on my desk.</p>
+      <p>That was some pretty good trickery.</p>
+      <p>Then there was a second combustion and another letter appeared.</p>
+      <p>It must have been some really clever optical illusion. Maybe this magic camp was actually premiere.</p>
+      <p>I opened the new letter. It read:</p>
+
+      <div class="letter">
+        <p>Thank you for accepting your invitation.</p>
+        <p>We look forward to seeing you on the 16th at dock 9. Do be on time. The boat leaves precisely at 11:14.</p>
+        <p>Eldric</p>
+      </div>
+
+      <p>I understood about half of those words. There was plenty of blank space at the bottom of the letter.</p>
+      <p>So I wrote: <em>Where is dock 9?</em></p>
+      <p>The letter combusted again. Right in front of me. Another letter appeared. Or rather, it was the same letter that disappeared but with additional writing on it.</p>
+      <p>Below my words it read: <em>You know, dock 9.</em></p>
+      <p>I wrote: <em>Sorry, not ringing a bell.</em></p>
+      <p>Combustion. Reappearance.</p>
+      <p><em>What do you mean? This is Felix Brightmoor, isn't it?</em></p>
+      <p>&ldquo;Um, sure, why not,&rdquo; I said.</p>
+      <p>I wrote: <em>Yes.</em></p>
+      <p>Combustion. Reappearance.</p>
+      <p><em>Dock 9. Wharf 3. Gary, Indiana.</em></p>
+      <p>How do I get to Gary, Indiana?</p>
+      <p>Combustion. Pause. Nothing.</p>
+      <p>&ldquo;I guess I stumped the magic letter.&rdquo; At this point when I said magic, I was still believing the stage magician sleight of hand kind and not real magic which I did not yet know existed.</p>
+      <p>I followed through on my original plan. When I returned from the bathroom (where I also brushed my teeth and applied some of my new deodorant), I looked at my desk where I had hoped, foolishly, that there would be another letter.</p>
+      <p>I turned off the light, changed into pajamas, and climbed into bed. As I pulled the covers to my chin, the room exploded with dazzling light.</p>
+      <p>I jumped out of bed and turned on the light.</p>
+      <p>Another letter.</p>
+      <p>This one had no note. The only thing inside was a bus ticket from my local terminal to Gary, Indiana, leaving the following evening.</p>
+      <p>When I picked up the ticket to examine it, the envelope combusted. I guess we were done communicating.</p>
+      <p>Maybe you would have been wary of the whole thing &mdash; a series of incinerating letters, a one way bus ticket, somebody named Eldric. You would have proceeded with a bit more caution. You would have been wise.</p>
+      <p>But I decided, then and there, that I was going to magic camp.</p>
+    </article>
+
+    <div class="download-row">
+      <a class="plain-btn" href="assets/first-four-chapters.pdf" download>Download the PDF</a>
+      <span class="note">Prefer a PDF for offline reading? Grab it here too.</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <svg class="doodle" viewBox="0 0 140 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M2 12 Q 12 2, 22 12 T 42 12 T 62 12 T 82 12 T 102 12 T 122 12 T 138 12" fill="none" stroke="#8b5e3c" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  <p>Camp SnickerWillow Hollow, Vol. 1 &mdash; written by Matt Meyer</p>
+  <p>Want the rest of the story? <a href="https://a.co/d/0a4B5YZD" target="_blank" rel="noopener">Find the full book on Amazon</a>.</p>
+</footer>
+
+</body>
+</html>
